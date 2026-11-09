@@ -1,0 +1,185 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+  background: #f3f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: min(100% - 2rem, 900px);
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+header {
+  margin-bottom: 2rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #173b70, #2563eb);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 12px 30px rgb(23 59 112 / 18%);
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+}
+
+header p {
+  margin: 0.75rem 0 0;
+  color: #e4edff;
+  font-size: 1.1rem;
+}
+
+header > a {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+header > a:hover {
+  background: rgb(255 255 255 / 14%);
+  color: #fff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 1.25rem;
+}
+
+section {
+  padding: 1.5rem;
+  border: 1px solid #dce5f1;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(31 55 89 / 7%);
+}
+
+section h2 {
+  margin: 0 0 1rem;
+  color: #173b70;
+  font-size: 1.25rem;
+}
+
+section p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+section ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section li {
+  line-height: 1.5;
+}
+
+#enunciado {
+  grid-column: 1 / -1;
+}
+
+#enunciado ul {
+  display: block;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+#enunciado li + li {
+  margin-top: 0.5rem;
+}
+
+#controles form,
+.controles form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+#controles input,
+#controles textarea,
+.controles input,
+.controles textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #bdcadd;
+  border-radius: 8px;
+  color: inherit;
+  font: inherit;
+}
+
+#controles input:focus-visible,
+#controles textarea:focus-visible,
+.controles input:focus-visible,
+.controles textarea:focus-visible {
+  border-color: #2563eb;
+  outline: 3px solid rgb(37 99 235 / 18%);
+}
+
+#controles textarea,
+.controles textarea {
+  resize: vertical;
+}
+
+#controles button,
+.controles button {
+  justify-self: start;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#controles button:hover,
+.controles button:hover {
+  background: #1d4ed8;
+}
+
+#resultado p + p {
+  margin-top: 0.65rem;
+}
+
+a {
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #173b70;
+}
+
+a:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid rgb(37 99 235 / 35%);
+  outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+  body {
+    width: min(100% - 1.25rem, 900px);
+    padding: 1.5rem 0;
+  }
+
+  section {
+    padding: 1.2rem;
+  }
+}
